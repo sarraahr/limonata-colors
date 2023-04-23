@@ -3,16 +3,29 @@ project:
 
 format:
   html:
-    theme: cosmo
+    theme: [litera, custom.scss]
     css: styles.css
+    mainfont: "Atkinson Hyperlegible"
+    page-layout: full
+    fontcolor: black
+    linkcolor: black
+    link-external-newwindow: true
     toc: true
+    code-link: true
+    code-copy: true
+    html-math-method: katex
+    anchor-sections: true
+    fig-cap-location: margin
+    reference-location: margin
+    footnotes-hover: true
+    highlight-style: tango
 
 website:
   twitter-card: true
   open-graph: true
   repo-actions: [issue]
   navbar:
-    background: primary
+    background: light
     search: true
   sidebar:
     style: floating

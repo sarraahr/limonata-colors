@@ -5,4 +5,4 @@ d = { 'settings': { 'branch': 'main',
                 'doc_host': 'https://sarraahr.github.io',
                 'git_url': 'https://github.com/sarraahr/limonata',
                 'lib_path': 'limonata'},
-  'syms': {'limonata.core': {'limonata.core.foo': ('core.html#foo', 'limonata/core.py')}}}
+  'syms': {}}

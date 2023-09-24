@@ -12,7 +12,7 @@ import matplotlib.pyplot as plt
 import cycler
 
 # %% ../nbs/00_lib.ipynb 5
-def _show_palette(palette:list[str],title:str) -> None:
+def _show_palette(palette: list[str], title: str) -> None:
     """
     Displays a list of colours as a bar chart.
     """
@@ -20,30 +20,32 @@ def _show_palette(palette:list[str],title:str) -> None:
     for i, color in enumerate(palette):
         ax.bar(i, 1, color=color)
         ax.set_axis_off()
-    
+
     # set title with coordinates
-    ax.set_title(title, loc='center', pad=-10, fontsize=14)
+    ax.set_title(title, loc="center", pad=-10, fontsize=14)
     plt.show()
 
 # %% ../nbs/00_lib.ipynb 6
-def _set_any_palette(family:str, palette_name:str) -> list[str]:
+def _set_any_palette(family: str, palette_name: str) -> list[str]:
     """
     Sets the colour palette for matplotlib for any family of palettes
     """
-    allowed_families = ["nature","cities"]
+    allowed_families = ["nature", "cities"]
     assert family in allowed_families, f"family must be one of {allowed_families}"
 
     project_root = os.path.dirname(os.path.realpath(__file__))
-    
-    palette = json.load(open(os.path.join(project_root,f"{family}.json")))
-    assert palette_name in palette.keys(), f"palette_name must be one of {palette.keys()}"
-    
-    rcParams['axes.prop_cycle'] = cycler.cycler(color=palette[palette_name])
+
+    palette = json.load(open(os.path.join(project_root, f"{family}.json")))
+    assert (
+        palette_name in palette.keys()
+    ), f"palette_name must be one of {palette.keys()}"
+
+    rcParams["axes.prop_cycle"] = cycler.cycler(color=palette[palette_name])
 
     return palette[palette_name]
 
 # %% ../nbs/00_lib.ipynb 7
-def set_nature_palette(palette_name:str) -> None:
+def set_nature_palette(palette_name: str) -> None:
     """
     Sets the colour palette to the specified nature palette.
     Run `show_nature_palettes()` to plot available palettes.
@@ -51,13 +53,12 @@ def set_nature_palette(palette_name:str) -> None:
 
     palette = _set_any_palette("nature", palette_name)
 
-    _show_palette(palette,palette_name)
+    _show_palette(palette, palette_name)
 
     return None
-    
 
 # %% ../nbs/00_lib.ipynb 9
-def set_city_palette(palette_name:str) -> None:
+def set_city_palette(palette_name: str) -> None:
     """
     Sets the colour palette to the specified city palette.
     Run `show_city_palettes()` to plot palettes.
@@ -65,7 +66,7 @@ def set_city_palette(palette_name:str) -> None:
 
     palette = _set_any_palette("cities", palette_name)
 
-    _show_palette(palette,palette_name)
+    _show_palette(palette, palette_name)
 
     return None
 
@@ -75,9 +76,9 @@ def show_nature_palettes() -> None:
     Displays a bar chart of all available nature palettes
     """
     project_root = os.path.dirname(os.path.realpath(__file__))
-    palettes = json.load(open(os.path.join(project_root,"nature.json")))
+    palettes = json.load(open(os.path.join(project_root, "nature.json")))
     for palette_name in palettes.keys():
-        _show_palette(palettes[palette_name],palette_name)
+        _show_palette(palettes[palette_name], palette_name)
 
     return None
 
@@ -87,9 +88,9 @@ def show_city_palettes() -> None:
     Displays a bar chart of all available nature palettes
     """
     project_root = os.path.dirname(os.path.realpath(__file__))
-    palettes = json.load(open(os.path.join(project_root,"cities.json")))
+    palettes = json.load(open(os.path.join(project_root, "cities.json")))
     for palette_name in palettes.keys():
-        _show_palette(palettes[palette_name],palette_name)
+        _show_palette(palettes[palette_name], palette_name)
 
     return None
 

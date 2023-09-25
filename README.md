@@ -27,7 +27,7 @@ from limonata import set_city_palette
 set_city_palette("TuebingenClassic")
 ```
 
-![](index_files/figure-commonmark/cell-2-output-1.png)
+![](nbs/index_files/figure-commonmark/cell-2-output-1.png)
 
 Or you can see which palettes are available with the following
 functions:
@@ -37,19 +37,19 @@ from limonata import show_nature_palettes
 show_nature_palettes()
 ```
 
-![](index_files/figure-commonmark/cell-3-output-1.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-1.png)
 
-![](index_files/figure-commonmark/cell-3-output-2.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-2.png)
 
-![](index_files/figure-commonmark/cell-3-output-3.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-3.png)
 
-![](index_files/figure-commonmark/cell-3-output-4.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-4.png)
 
-![](index_files/figure-commonmark/cell-3-output-5.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-5.png)
 
-![](index_files/figure-commonmark/cell-3-output-6.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-6.png)
 
-![](index_files/figure-commonmark/cell-3-output-7.png)
+![](nbs/index_files/figure-commonmark/cell-3-output-7.png)
 
 See the documentation [here](https://sarraahr.github.io/limonata) for
 more details and examples.

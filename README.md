@@ -4,16 +4,10 @@
 
 ## Install
 
-Either using `pip`:
+Using `pip`:
 
 ``` sh
 pip install limonata
-```
-
-or `conda`:
-
-``` sh
-conda install limonata
 ```
 
 ## How to use
